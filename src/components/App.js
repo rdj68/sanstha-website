@@ -22,7 +22,7 @@ function App() {
         <Route path="/howtoreach" element={<HowToReach />} />
         <Route path="/institute" element={<Institute />} />
       </Routes>
-      <h1 className="text font-bold underline">Hello world!</h1>
+      <Gallery />
     </>
   );
 }

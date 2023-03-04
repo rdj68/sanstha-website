@@ -257,7 +257,7 @@ const Navbar = () => {
                 <p className={Styles.navText}>How to Reach</p>
               </li>
               <li>
-                <p className={Styles.navText}>Contact</p>
+                <p className={Styles.navText}>Contact Us</p>
               </li>
             </ul>
           )}

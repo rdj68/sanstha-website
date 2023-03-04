@@ -12,15 +12,18 @@ import { Navbar } from "./common/Navbar";
 import { Footer } from "./common/Footer";
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/facilities" element={<Facilities />} />
-      <Route path="/gallery" element={<Gallery />} />
-      <Route path="/howtoreach" element={<HowToReach />} />
-      <Route path="/institute" element={<Institute />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/facilities" element={<Facilities />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/howtoreach" element={<HowToReach />} />
+        <Route path="/institute" element={<Institute />} />
+      </Routes>
+      <h1 className="text font-bold underline">Hello world!</h1>
+    </>
   );
 }
 

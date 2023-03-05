@@ -9,12 +9,19 @@ import Gallery from "./Gallery/Gallery";
 import { HowToReach } from "./HowToReach/HowToReach";
 import { Institute } from "./Institute/Institute";
 import { Trustee } from "./About/Trustee";
+import { Ceo } from "./About/Ceo";
+import { Manager } from "./About/Manager";
+import { President } from "./About/President";
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/presidentmessage" element={<President />} />
+        <Route path="/trsteedesk" element={<Trustee />} />
+        <Route path="/ceodesk" element={<Ceo />} />
+        <Route path="/managerdesk" element={<Manager />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/gallery" element={<Gallery />} />

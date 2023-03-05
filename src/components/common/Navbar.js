@@ -234,7 +234,12 @@ const Navbar = () => {
       </div>
       {/* sideNavigation  */}
       <div className={Styles.mainSidenavContainer}>
-        <div className="border-b-[1px] p-2 flex gap-4 items-center">
+        <div className="border-b-[1px] p-2 flex gap-4 items-center justify-between">
+        <img
+            src="https://avcoe.org/trustwebsite/img/slogo.png"
+            className="h-10"
+            alt="logo"
+          />
           {toggle ? (
             <XMarkIcon
               onClick={() => setToggle(!toggle)}
@@ -246,11 +251,7 @@ const Navbar = () => {
               className="h-8 w-8 cursor-pointer"
             />
           )}
-          <img
-            src="https://avcoe.org/trustwebsite/img/slogo.png"
-            className="h-10"
-            alt="logo"
-          />
+         
         </div>
 
         <div className={Styles.sideContainer}>

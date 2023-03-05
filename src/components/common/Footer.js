@@ -12,19 +12,9 @@ export const Footer = () => {
           <Contact />
         </div>
         <div className="w-full lg:w-1/2">
-          <div className="flex flex-wrap items-top mb-6">
+          <div className="flex flex-wrap mb-6 justify-end">
             <NavLinks />
-            <div className="w-full lg:w-1/3 px-4">
-              <Logo />
-              <div className="w-full text-center">
-                <div className="text-sm text-blueGray-500 font-semibold py-1">
-                  Copyright © <span id="get-current-year">2023 </span> by AVCOE
-                </div>
-                <div className="text-sm text-blueGray-500 font-semibold py-1">
-                  All Rights Reserved
-                </div>
-              </div>
-            </div>
+            <Logo />
           </div>
         </div>
       </div>
@@ -80,7 +70,19 @@ function NavLinks() {
   );
 }
 function Logo() {
-  return <img className="hidden sm:block md:w-full" src={logo} alt="ASSVS" />;
+  return (
+    <div className="w-full lg:w-1/3 px-4">
+      <img className="hidden sm:block md:w-full" src={logo} alt="ASSVS" />
+      <div className="w-full text-center">
+        <div className="text-sm text-blueGray-500 font-semibold py-1">
+          Copyright © <span id="get-current-year">2023 </span> by AVCOE
+        </div>
+        <div className="text-sm text-blueGray-500 font-semibold py-1">
+          All Rights Reserved
+        </div>
+      </div>
+    </div>
+  );
 }
 function Contact() {
   return (

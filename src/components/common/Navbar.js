@@ -41,7 +41,7 @@ const Navbar = () => {
     },
     {
       name: "Trustee Desk",
-      to: "/trsteedesk",
+      to: "/trusteedesk",
     },
     {
       name: "CEO's Desk",
@@ -123,11 +123,7 @@ const Navbar = () => {
         <div className={Styles.navContainer}>
           <ul className="flex gap-6">
             <li>
-              <img
-                src={require("./slogo.png")}
-                className="h-10"
-                alt="logo"
-              />
+              <img src={require("./slogo.png")} className="h-10" alt="logo" />
             </li>
             <li>
               <Link to="/">
@@ -216,13 +212,6 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/howtoreach">
-                <div className={Styles.nav_items}>
-                  <p>How to Reach</p>
-                </div>
-              </Link>
-            </li>
-            <li>
               <Link to="/contact">
                 <div className={Styles.nav_items}>
                   <p>Contact</p>
@@ -235,11 +224,7 @@ const Navbar = () => {
       {/* sideNavigation  */}
       <div className={Styles.mainSidenavContainer}>
         <div className="border-b-[1px] p-2 flex gap-4 items-center justify-between">
-        <img
-            src={require("./slogo.png")}
-            className="h-10"
-            alt="logo"
-          />
+          <img src={require("./slogo.png")} className="h-10" alt="logo" />
           {toggle ? (
             <XMarkIcon
               onClick={() => setToggle(!toggle)}
@@ -251,13 +236,12 @@ const Navbar = () => {
               className="h-8 w-8 cursor-pointer"
             />
           )}
-         
         </div>
 
         <div className={Styles.sideContainer}>
           {toggle && (
             <ul className={Styles.sideMainContainer}>
-              <li onClick={()=> setToggle(!toggle)}>
+              <li onClick={() => setToggle(!toggle)}>
                 <Link to="/">
                   <p className={Styles.navText}>Home</p>
                 </Link>
@@ -282,7 +266,7 @@ const Navbar = () => {
                           key={index}
                           to={item.to}
                           className={Styles.sideDropdownItem}
-                          onClick={()=> setToggle(!toggle)}
+                          onClick={() => setToggle(!toggle)}
                         >
                           <p>{item.name}</p>
                         </Link>
@@ -340,7 +324,7 @@ const Navbar = () => {
                           to={item.to}
                           className={Styles.sideDropdownItem}
                           key={index}
-                          onClick={()=> setToggle(!toggle)}
+                          onClick={() => setToggle(!toggle)}
                         >
                           <p>{item.name}</p>
                         </Link>
@@ -350,17 +334,12 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
-                <Link onClick={()=> setToggle(!toggle)} to="/gallery">
+                <Link onClick={() => setToggle(!toggle)} to="/gallery">
                   <p className={Styles.navText}>Gallery</p>
                 </Link>
               </li>
               <li>
-                <Link onClick={()=> setToggle(!toggle)} to="/howtoreach">
-                  <p className={Styles.navText}>How to Reach</p>
-                </Link>
-              </li>
-              <li>
-                <Link onClick={()=> setToggle(!toggle)} to="/contact">
+                <Link onClick={() => setToggle(!toggle)} to="/contact">
                   <p className={Styles.navText}>Contact</p>
                 </Link>
               </li>

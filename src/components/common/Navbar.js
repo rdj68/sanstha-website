@@ -257,7 +257,7 @@ const Navbar = () => {
         <div className={Styles.sideContainer}>
           {toggle && (
             <ul className={Styles.sideMainContainer}>
-              <li>
+              <li onClick={()=> setToggle(!toggle)}>
                 <Link to="/">
                   <p className={Styles.navText}>Home</p>
                 </Link>
@@ -282,6 +282,7 @@ const Navbar = () => {
                           key={index}
                           to={item.to}
                           className={Styles.sideDropdownItem}
+                          onClick={()=> setToggle(!toggle)}
                         >
                           <p>{item.name}</p>
                         </Link>
@@ -339,6 +340,7 @@ const Navbar = () => {
                           to={item.to}
                           className={Styles.sideDropdownItem}
                           key={index}
+                          onClick={()=> setToggle(!toggle)}
                         >
                           <p>{item.name}</p>
                         </Link>
@@ -348,17 +350,17 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
-                <Link to="/gallery">
+                <Link onClick={()=> setToggle(!toggle)} to="/gallery">
                   <p className={Styles.navText}>Gallery</p>
                 </Link>
               </li>
               <li>
-                <Link to="/howtoreach">
+                <Link onClick={()=> setToggle(!toggle)} to="/howtoreach">
                   <p className={Styles.navText}>How to Reach</p>
                 </Link>
               </li>
               <li>
-                <Link to="/contact">
+                <Link onClick={()=> setToggle(!toggle)} to="/contact">
                   <p className={Styles.navText}>Contact</p>
                 </Link>
               </li>

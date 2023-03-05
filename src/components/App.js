@@ -5,7 +5,7 @@ import { Home } from "./Home/Home";
 import { About } from "./About/About";
 import { Contact } from "./Contact/Contact";
 import { Facilities } from "./Facilities/Facilities";
-import { Gallery } from "./Gallery/Gallery";
+import Gallery from "./Gallery/Gallery";
 import { HowToReach } from "./HowToReach/HowToReach";
 import { Institute } from "./Institute/Institute";
 import { Navbar } from "./common/Navbar";
@@ -22,7 +22,7 @@ function App() {
         <Route path="/howtoreach" element={<HowToReach />} />
         <Route path="/institute" element={<Institute />} />
       </Routes>
-      <Gallery />
+      <HowToReach />
     </>
   );
 }

@@ -12,9 +12,11 @@ import { Trustee } from "./About/Trustee";
 import { Ceo } from "./About/Ceo";
 import { Manager } from "./About/Manager";
 import { President } from "./About/President";
+import Navbar from "./common/Navbar";
 function App() {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -27,7 +29,6 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/howtoreach" element={<HowToReach />} />
         <Route path="/institute" element={<Institute />} />
-        
       </Routes>
     </>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../common/Navbar";
 import images from "./data";
 import Navbar from "../common/Navbar";
 

@@ -19,6 +19,7 @@ const Navbar = () => {
     sideMainContainer : "shadow-lg p-2",
     sideDropdownItem : "p-2 bg-violet-700 text-white cursor-pointer  text-center rounded-lg transition-all duration-500 ease-out"
   };
+  let logo = "./images/slogo.png"
   const [toggle, setToggle] = useState(false);
   const [about, setAbout] = useState(false);
   const [institutes, setInstitutes] = useState(false);
@@ -87,7 +88,7 @@ const Navbar = () => {
           <ul className="flex gap-6">
             <li>
               <img
-                src="https://avcoe.org/trustwebsite/img/slogo.png"
+                src={logo}
                 className="h-10"
                 alt="logo"
               />

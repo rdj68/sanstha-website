@@ -2,7 +2,7 @@ import React from "react";
 
 const ImageCarousel = () => {
   return (
-    <div>
+    <div className="p-2">
       <div
         id="carouselExampleControls"
         className="relative"
@@ -10,15 +10,17 @@ const ImageCarousel = () => {
         data-te-carousel-slide
       >
         <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+            
           <div
             className="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
             data-te-carousel-active
           >
             <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-              className="block w-full"
+              src={require("./photos/slider1.jpg")}
+              className="block w-full h-[80vh] object-cover rounded-lg"
               alt="Wild Landscape"
+
             />
           </div>
           <div
@@ -26,8 +28,8 @@ const ImageCarousel = () => {
             data-te-carousel-item
           >
             <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-              className="block w-full"
+            src={require("./photos/slider2.jpg")}
+              className="block w-full h-[80vh] object-cover rounded-lg"
               alt="Camera"
             />
           </div>
@@ -36,8 +38,18 @@ const ImageCarousel = () => {
             data-te-carousel-item
           >
             <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-              className="block w-full"
+             src={require("./photos/slider3.jpg")}
+              className="block w-full h-[80vh] object-cover rounded-lg"
+              alt="Exotic Fruits"
+            />
+          </div>
+          <div
+            className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item
+          >
+            <img
+             src={require("./photos/slider4.JPG")}
+              className="block w-full h-[80vh] object-cover rounded-lg"
               alt="Exotic Fruits"
             />
           </div>
@@ -55,7 +67,7 @@ const ImageCarousel = () => {
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              className="h-6 w-6"
+              className="h-6 w-6 text-white"
             >
               <path
                 stroke-linecap="round"
@@ -81,7 +93,7 @@ const ImageCarousel = () => {
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              classNameName="h-6 w-6"
+              classNameName="h-6 w-6 text-white"
             >
               <path
                 stroke-linecap="round"
@@ -91,7 +103,7 @@ const ImageCarousel = () => {
             </svg>
           </span>
           <span classNameName="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-            Next
+           
           </span>
         </button>
       </div>

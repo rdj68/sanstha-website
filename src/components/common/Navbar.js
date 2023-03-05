@@ -118,7 +118,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="bg-white sticky top-0 left-0">
+    <div className="bg-white sticky top-0 left-0 z-10">
       <div className={Styles.mainNavContainer}>
         <div className={Styles.navContainer}>
           <ul className="flex gap-6">

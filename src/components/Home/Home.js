@@ -1,9 +1,14 @@
 import React from "react";
+import Founder from "./Founder";
 import ImageCarousel from "./ImageCarousel";
+import VisionAndMission from "./VisionAndMission";
 
 export const Home = () => {
   return (
-    <ImageCarousel />
-  )
-  
+    <>
+      <Founder />
+      <ImageCarousel />
+      <VisionAndMission />
+    </>
+  );
 };

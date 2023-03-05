@@ -8,8 +8,7 @@ import { Facilities } from "./Facilities/Facilities";
 import Gallery from "./Gallery/Gallery";
 import { HowToReach } from "./HowToReach/HowToReach";
 import { Institute } from "./Institute/Institute";
-import { Navbar } from "./common/Navbar";
-import { Footer } from "./common/Footer";
+import { Trustee } from "./About/Trustee";
 function App() {
   return (
     <>
@@ -22,7 +21,6 @@ function App() {
         <Route path="/howtoreach" element={<HowToReach />} />
         <Route path="/institute" element={<Institute />} />
       </Routes>
-      <HowToReach />
     </>
   );
 }

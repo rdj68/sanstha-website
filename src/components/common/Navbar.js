@@ -124,7 +124,7 @@ const Navbar = () => {
           <ul className="flex gap-6">
             <li>
               <img
-                src="https://avcoe.org/trustwebsite/img/slogo.png"
+                src={require("./slogo.png")}
                 className="h-10"
                 alt="logo"
               />
@@ -236,7 +236,7 @@ const Navbar = () => {
       <div className={Styles.mainSidenavContainer}>
         <div className="border-b-[1px] p-2 flex gap-4 items-center justify-between">
         <img
-            src="https://avcoe.org/trustwebsite/img/slogo.png"
+            src={require("./slogo.png")}
             className="h-10"
             alt="logo"
           />

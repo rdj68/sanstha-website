@@ -7,13 +7,14 @@ import {
 export const Contact = () => {
   return (
     <>
-      <div className="flex flex-col sm:flex-row">
-        <div className="flex flex-wrap sm:w-1/3 px-5 pb-5 sm:pt-20">
-          <ContactDetails />
-        </div>
+      <div className="flex flex-col sm:flex-row mb-3">
         <div className="flex flex-wrap sm:w-1/3 bg-gray-100 px-5 py-5 sm:pt-20">
           <ContactUs />
         </div>
+        <div className="flex flex-wrap sm:w-1/3 px-5 pb-5 sm:pt-20">
+          <ContactDetails />
+        </div>
+
         <div className="flex flex-wrap sm:w-1/3">
           <Map />
         </div>

@@ -4,7 +4,7 @@ const Gallery = () => {
   return (
     <>
       <h1 className="text-5xl text-bold text-center mb-2 sm:mt-2">Gallery</h1>
-      <section className="overflow-auto text-neutral-700">
+      <section className="text-neutral-700">
         <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
           <div class="-m-1 flex flex-wrap md:-m-2">
             <Images />

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
+import { ChevronUpIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const Styles = {
@@ -9,32 +11,50 @@ const Navbar = () => {
     mainSidenavContainer: "p-2 bg-white sticky top-0 md:hidden",
     navContainer: "p-4 border-b-[1px] flex flex-col justify-center ",
     li_items:
-      "hover:bg-gray-100 hover:text-blue-700 rounded-md p-2 w-full text-center cursor-pointer",
+      "hover:bg-gray-100 transition-all duration-300 ease-out hover:text-blue-700 rounded-md p-2 w-full text-center cursor-pointer",
     nav_items:
       "flex gap-1 cursor-pointer items-center justify-center hover:text-blue-600",
     nav_dropdown:
       "flex flex-col absolute gap-2 p-2 justify-center items-center bg-white border-[1px] rounded-lg ",
-    sideContainer: "mt-1 flex flex-col gap-4 p-2",
+    sideContainer: "mt-1 flex flex-col gap-4 p-2  rounded-lg",
     side_items: "ml-10",
     navText:
-      "font-bold text-gray-700 hover:text-blue-700 cursor-pointer  mt-3 flex gap-1 items-center",
+      " hover:text-blue-700 cursor-pointer border-[1px] p-1 bg-gray-100 rounded-md pl-3 mt-3 flex gap-1 items-center justify-between",
     sideDropdown:
-      "p-2 rounded-md flex gap-4 flex-col transition-all duration-500 ease-out",
-    sideMainContainer: "shadow-lg p-2",
+      "p-2 rounded-md flex gap-4 flex-col transition-all duration-300 ease-out",
+    sideMainContainer: " p-2 rounded-lg border-[1px]",
     sideDropdownItem:
-      "p-2 bg-violet-700 text-white cursor-pointer  text-center rounded-lg transition-all duration-500 ease-out",
+      "p-2 hover:text-blue-600 hover:bg-gray-100 text-sm text-gray-600 cursor-pointer border-[1px]  text-center rounded-lg transition-all duration-500 ease-out",
   };
   const [toggle, setToggle] = useState(false);
   const [about, setAbout] = useState(false);
   const [institutes, setInstitutes] = useState(false);
   const [facilities, setFacilities] = useState(false);
   const aboutItems = [
-    "About Us",
-    "President Message",
-    "Trustee Desk",
-    "CEO's Desk",
-    "Manager's Desk",
-    "Board of Directors",
+    {
+      name: "About Us",
+      to: "/aboutus",
+    },
+    {
+      name: "President Message",
+      to: "/presidentmessage",
+    },
+    {
+      name: "Trustee Desk",
+      to: "/trsteedesk",
+    },
+    {
+      name: "CEO's Desk",
+      to: "/ceodesk",
+    },
+    {
+      name: "Manager's Desk",
+      to: "/managerdesk",
+    },
+    {
+      name: "Board of Directors",
+      to: "/bod",
+    },
   ];
   const institutesData = [
     {
@@ -79,10 +99,22 @@ const Navbar = () => {
     },
   ];
   const facilitiesData = [
-    "Bus Service",
-    "Hostel",
-    "Banking",
-    "Other Facilities",
+    {
+      name: "Bus Service",
+      to: "/busservice",
+    },
+    {
+      name: "Hostel",
+      to: "/hostel",
+    },
+    {
+      name: "Banking",
+      to: "/banking",
+    },
+    {
+      name: "Other Facilities",
+      to: "/otherfacilities",
+    },
   ];
 
   return (
@@ -98,9 +130,11 @@ const Navbar = () => {
               />
             </li>
             <li>
-              <div className={Styles.nav_items}>
-                <p>Home</p>
-              </div>
+              <Link to="/">
+                <div className={Styles.nav_items}>
+                  <p>Home</p>
+                </div>
+              </Link>
             </li>
 
             <li
@@ -109,14 +143,18 @@ const Navbar = () => {
             >
               <div className={Styles.nav_items}>
                 <p>About</p>
-                <ChevronDownIcon className="h-4 w-4" />
+                {about ? (
+                  <ChevronUpIcon className="h-4 w-4" />
+                ) : (
+                  <ChevronDownIcon className="h-4 w-4" />
+                )}
               </div>
               {about && (
                 <ul className={Styles.nav_dropdown}>
                   {aboutItems.map((item, index) => (
-                    <li key={index} className={Styles.li_items}>
-                      {item}
-                    </li>
+                    <Link key={index} className={Styles.li_items} to={item.to}>
+                      <li>{item.name}</li>
+                    </Link>
                   ))}
                 </ul>
               )}
@@ -127,7 +165,11 @@ const Navbar = () => {
             >
               <div className={Styles.nav_items}>
                 <p>Institutes</p>
-                <ChevronDownIcon className="h-4 w-4" />
+                {institutes ? (
+                  <ChevronUpIcon className="h-4 w-4" />
+                ) : (
+                  <ChevronDownIcon className="h-4 w-4" />
+                )}
               </div>
               {institutes && (
                 <ul className={Styles.nav_dropdown}>
@@ -150,55 +192,74 @@ const Navbar = () => {
             >
               <div className={Styles.nav_items}>
                 <p>Facilities</p>
-                <ChevronDownIcon className="h-4 w-4" />
+                {facilities ? (
+                  <ChevronUpIcon className="h-4 w-4" />
+                ) : (
+                  <ChevronDownIcon className="h-4 w-4" />
+                )}
               </div>
               {facilities && (
                 <ul className={Styles.nav_dropdown}>
                   {facilitiesData.map((item, index) => (
-                    <p target="blank" key={index} className={Styles.li_items}>
-                      {item}
-                    </p>
+                    <Link key={index} to={item.to} className={Styles.li_items}>
+                      <p target="blank">{item.name}</p>
+                    </Link>
                   ))}
                 </ul>
               )}
             </li>
             <li>
-              <div className={Styles.nav_items}>
-                <p>Gallery</p>
-              </div>
+              <Link to="/gallery">
+                <div className={Styles.nav_items}>
+                  <p>Gallery</p>
+                </div>
+              </Link>
             </li>
             <li>
-              <div className={Styles.nav_items}>
-                <p>How to Reach</p>
-              </div>
+              <Link to="/howtoreach">
+                <div className={Styles.nav_items}>
+                  <p>How to Reach</p>
+                </div>
+              </Link>
             </li>
             <li>
-              <div className={Styles.nav_items}>
-                <p>Contact</p>
-              </div>
+              <Link to="/contact">
+                <div className={Styles.nav_items}>
+                  <p>Contact</p>
+                </div>
+              </Link>
             </li>
           </ul>
         </div>
       </div>
       {/* sideNavigation  */}
       <div className={Styles.mainSidenavContainer}>
-        {toggle ? (
-          <XMarkIcon
-            onClick={() => setToggle(!toggle)}
-            className="h-8 w-8 cursor-pointer"
+        <div className="border-b-[1px] p-2 flex gap-4 items-center">
+          {toggle ? (
+            <XMarkIcon
+              onClick={() => setToggle(!toggle)}
+              className="h-8 w-8 cursor-pointer"
+            />
+          ) : (
+            <Bars3Icon
+              onClick={() => setToggle(!toggle)}
+              className="h-8 w-8 cursor-pointer"
+            />
+          )}
+          <img
+            src="https://avcoe.org/trustwebsite/img/slogo.png"
+            className="h-10"
+            alt="logo"
           />
-        ) : (
-          <Bars3Icon
-            onClick={() => setToggle(!toggle)}
-            className="h-8 w-8 cursor-pointer"
-          />
-        )}
+        </div>
 
         <div className={Styles.sideContainer}>
           {toggle && (
             <ul className={Styles.sideMainContainer}>
               <li>
-                <p className={Styles.navText}>Home</p>
+                <Link to="/">
+                  <p className={Styles.navText}>Home</p>
+                </Link>
               </li>
               <li>
                 <div
@@ -206,15 +267,23 @@ const Navbar = () => {
                   className={Styles.navText}
                 >
                   <p>About</p>
-                  <ChevronDownIcon className="h-4 w-4" />
+                  {about ? (
+                    <ChevronUpIcon className="h-4 w-4" />
+                  ) : (
+                    <ChevronDownIcon className="h-4 w-4" />
+                  )}
                 </div>
                 <div className={Styles.side_items}>
                   {about && (
                     <div className={Styles.sideDropdown}>
                       {aboutItems.map((item, index) => (
-                        <p className={Styles.sideDropdownItem} key={index}>
-                          {item}
-                        </p>
+                        <Link
+                          key={index}
+                          to={item.to}
+                          className={Styles.sideDropdownItem}
+                        >
+                          <p>{item.name}</p>
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -226,7 +295,11 @@ const Navbar = () => {
                   className={Styles.navText}
                 >
                   <p>Institutes</p>
-                  <ChevronDownIcon className="h-4 w-4" />
+                  {institutes ? (
+                    <ChevronUpIcon className="h-4 w-4" />
+                  ) : (
+                    <ChevronDownIcon className="h-4 w-4" />
+                  )}
                 </div>
                 <div className={Styles.side_items}>
                   {institutes && (
@@ -251,28 +324,42 @@ const Navbar = () => {
                   className={Styles.navText}
                 >
                   <p>Facilities</p>
-                  <ChevronDownIcon className="h-4 w-4" />
+                  {facilities ? (
+                    <ChevronUpIcon className="h-4 w-4" />
+                  ) : (
+                    <ChevronDownIcon className="h-4 w-4" />
+                  )}
                 </div>
                 <div className={Styles.side_items}>
                   {facilities && (
                     <div className={Styles.sideDropdown}>
                       {facilitiesData.map((item, index) => (
-                        <p className={Styles.sideDropdownItem} key={index}>
-                          {item}
-                        </p>
+                        <Link
+                          to={item.to}
+                          className={Styles.sideDropdownItem}
+                          key={index}
+                        >
+                          <p>{item.name}</p>
+                        </Link>
                       ))}
                     </div>
                   )}
                 </div>
               </li>
               <li>
-                <p className={Styles.navText}>Gallery</p>
+                <Link to="/gallery">
+                  <p className={Styles.navText}>Gallery</p>
+                </Link>
               </li>
               <li>
-                <p className={Styles.navText}>How to Reach</p>
+                <Link to="/howtoreach">
+                  <p className={Styles.navText}>How to Reach</p>
+                </Link>
               </li>
               <li>
-                <p className={Styles.navText}>Contact</p>
+                <Link to="/contact">
+                  <p className={Styles.navText}>Contact</p>
+                </Link>
               </li>
             </ul>
           )}

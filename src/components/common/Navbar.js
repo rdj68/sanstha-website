@@ -7,7 +7,7 @@ import { ChevronUpIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const Styles = {
-    mainNavContainer: "w-[100vw] bg-white sticky top-0 left-0 hidden md:inline",
+    mainNavContainer: "w-[100vw]  hidden md:inline",
     mainSidenavContainer: "p-2 bg-white sticky top-0 md:hidden",
     navContainer: "p-4 border-b-[1px] flex flex-col justify-center ",
     li_items:
@@ -118,7 +118,7 @@ const Navbar = () => {
   ];
 
   return (
-    <>
+    <div className="bg-white sticky top-0 left-0">
       <div className={Styles.mainNavContainer}>
         <div className={Styles.navContainer}>
           <ul className="flex gap-6">
@@ -234,7 +234,12 @@ const Navbar = () => {
       </div>
       {/* sideNavigation  */}
       <div className={Styles.mainSidenavContainer}>
-        <div className="border-b-[1px] p-2 flex gap-4 items-center">
+        <div className="border-b-[1px] p-2 flex gap-4 items-center justify-between">
+        <img
+            src="https://avcoe.org/trustwebsite/img/slogo.png"
+            className="h-10"
+            alt="logo"
+          />
           {toggle ? (
             <XMarkIcon
               onClick={() => setToggle(!toggle)}
@@ -246,11 +251,7 @@ const Navbar = () => {
               className="h-8 w-8 cursor-pointer"
             />
           )}
-          <img
-            src="https://avcoe.org/trustwebsite/img/slogo.png"
-            className="h-10"
-            alt="logo"
-          />
+         
         </div>
 
         <div className={Styles.sideContainer}>
@@ -365,7 +366,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

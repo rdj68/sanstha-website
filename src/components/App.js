@@ -27,6 +27,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/howtoreach" element={<HowToReach />} />
         <Route path="/institute" element={<Institute />} />
+        
       </Routes>
     </>
   );

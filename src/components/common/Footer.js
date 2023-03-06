@@ -3,10 +3,10 @@ import logo from "./slogo.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-100 pt-8">
+    <footer className="bg-gray-700 text-white  pt-8">
       <div className="flex flex-col sm:flex-row px-4">
         <div className="flex flex-wrap text-left">
-          <h4 className="text-2xl font-semibold">
+          <h4 className="text-xl font-semibold">
             Amrutvahini Sheti and Shikshan Vikas Sanstha, Sangamner
           </h4>
           <Contact />
@@ -56,7 +56,7 @@ function NavLinks() {
       </span>
       <ul className="list-unstyled flex sm:flex-col gap-2">
         {navData.map((items) => (
-          <li>
+          <li key={items.name}>
             <a
               className="text-blueGray-600 hover:scale-110 hover:text-violet-500 font-semibold block pb-2 text-sm"
               href={items.path}
@@ -72,8 +72,12 @@ function NavLinks() {
 function Logo() {
   return (
     <div className="w-full lg:w-1/3 px-4">
-      <img className="hidden sm:block md:w-full" src={logo} alt="ASSVS" />
-      <div className="w-full text-center">
+      <img
+        className="hidden sm:block md:w-full h-[100px] object-contain w-[100px]"
+        src={logo}
+        alt="ASSVS"
+      />
+      <div className="w-full text-center mt-10">
         <div className="text-sm text-blueGray-500 font-semibold py-1">
           Copyright © <span id="get-current-year">2023 </span> by AVCOE
         </div>

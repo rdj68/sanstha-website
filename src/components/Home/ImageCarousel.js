@@ -10,7 +10,6 @@ const ImageCarousel = () => {
         data-te-carousel-slide
       >
         <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-            
           <div
             className="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
@@ -20,7 +19,6 @@ const ImageCarousel = () => {
               src={require("./photos/slider1.jpg")}
               className="block w-full h-[80vh] object-cover rounded-lg"
               alt="Wild Landscape"
-
             />
           </div>
           <div
@@ -28,7 +26,7 @@ const ImageCarousel = () => {
             data-te-carousel-item
           >
             <img
-            src={require("./photos/slider2.jpg")}
+              src={require("./photos/slider2.jpg")}
               className="block w-full h-[80vh] object-cover rounded-lg"
               alt="Camera"
             />
@@ -38,7 +36,7 @@ const ImageCarousel = () => {
             data-te-carousel-item
           >
             <img
-             src={require("./photos/slider3.jpg")}
+              src={require("./photos/slider3.jpg")}
               className="block w-full h-[80vh] object-cover rounded-lg"
               alt="Exotic Fruits"
             />
@@ -48,7 +46,7 @@ const ImageCarousel = () => {
             data-te-carousel-item
           >
             <img
-             src={require("./photos/slider4.JPG")}
+              src={require("./photos/slider4.JPG")}
               className="block w-full h-[80vh] object-cover rounded-lg"
               alt="Exotic Fruits"
             />
@@ -65,13 +63,13 @@ const ImageCarousel = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="h-6 w-6 text-white"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M15.75 19.5L8.25 12l7.5-7.5"
               />
             </svg>
@@ -91,20 +89,18 @@ const ImageCarousel = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
-              classNameName="h-6 w-6 text-white"
+              className="h-6 w-6 text-white"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M8.25 4.5l7.5 7.5-7.5 7.5"
               />
             </svg>
           </span>
-          <span classNameName="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-           
-          </span>
+          <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"></span>
         </button>
       </div>
     </div>

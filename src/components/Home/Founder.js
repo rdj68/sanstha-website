@@ -2,19 +2,19 @@ import React from "react";
 
 const Founder = () => {
   return (
-    <div className=" p-10 border-[1px] m-2 rounded-lg text-center ">
+    <div className=" px-10 md:mx-20 m-2 rounded-lg text-center ">
       <div>
-        <p className="text-3xl font-bold text-gray-700">
+        <p className="md:text-3xl font-bold ">
           Amrutvahini Sheti and Shikshan Vikas Sanstha, Sangamner
         </p>
         <div className="flex flex-col items-center mt-4 md:flex-row gap-4">
           <img
-            className="h-[250px] w-[250px] object-cover rounded-full shadow-md"
+            className="h-[130px] w-[130px] md:h-[250px] md:w-[250px] object-cover rounded-full shadow-md"
             src="https://pbs.twimg.com/media/FI4I2TUaMAQdcJ6?format=jpg&name=large"
             alt=""
           />
           <div className="mt-5">
-            <p className="font-bold text-sm">
+            <p className="font-bold text">
               Late. Shri. Bhausaheb Santuji Thorat Founder, Amrutvahini Sheti
               and Shikshan Vikas Sanstha, Sangamner
             </p>

@@ -1,17 +1,20 @@
 import React from "react";
-import { bod } from "./aboutData";
-import { President } from "./President";
-import { Trustee } from "./Trustee";
-import { Manager } from "./Manager";
-import { Ceo } from "./Ceo";
+import { bod, messsageList } from "./aboutData";
 
 export const About = () => {
   return (
     <>
-      <President />
-      <Trustee />
-      <Manager />
-      <Ceo />
+      {messsageList.map((person) => (
+        <CardMessage
+          key={person.name}
+          name={person.name}
+          message={person.message}
+          post={person.position}
+          imgSrc={person.imgSrc}
+          color={person.colorBg}
+          heading={person.heading}
+        />
+      ))}
       <div>
         <h1 className="text-3xl text-left">Board of Directors</h1>
         <div className="bod flex w-full overflow-x-scroll my-5">
@@ -55,29 +58,34 @@ function CardBod({ name, post, description, imgSrc }) {
     </div>
   );
 }
-function PresidentMessage({ name, post, description, imgSrc }) {
+
+function CardMessage({ heading, name, post, message, imgSrc, color }) {
   return (
     <>
-      <div>
-        <h1 className="text-3xl text-left"> President's Message</h1>
+      <div className="mt-5">
+        <b className="mt-10 text-4xl text-center">
+          <h1>{heading}</h1>
+        </b>
       </div>
-      <div class="flex ml-20 mr-20 mt-10 mb-10">
-        <div class="flex flex-col rounded-lg bg-white shadow-lg dark:bg-neutral-700  md:flex-row">
+      <div className={"flex justify-center md:mx-20 mx-3  mt-10 mb-10" + color}>
+        <div className="flex flex-col rounded-lg shadow-lg dark:bg-neutral-700  md:flex-row">
           <img
-            class="h-full w-full rounded-t-lg md:w-full md:rounded-none md:rounded-l-lg"
+            className="h-full w-full rounded-t-lg md:w-full md:rounded-none md:rounded-l-lg"
             src={imgSrc}
-            alt="no"
+            alt={heading}
           />
 
-          <div class="flex flex-col p-6">
-            <h5 class="mb-2 text-4xl font-medium text-neutral-800 dark:text-neutral-50">
+          <div className="flex flex-col p-6">
+            <h5 className="mb-2 text-4xl font-medium text-neutral-800 dark:text-neutral-50">
               {name}
             </h5>
-            <p class="text-xl text-neutral-500 dark:text-neutral-300">{post}</p>
+            <p className="text-xl text-neutral-500 dark:text-neutral-300">
+              {post}
+            </p>
             <br />
 
-            <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-              {description}
+            <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+              {message}
             </p>
           </div>
         </div>

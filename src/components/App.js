@@ -15,7 +15,7 @@ import { Footer } from "./common/Footer";
 function App() {
   return (
     <>
-      <div className="flex flex-col   justify-between">
+      <div className="flex flex-col bg-[#F7F7F7] justify-between">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

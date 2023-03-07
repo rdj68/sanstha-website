@@ -32,7 +32,7 @@ export const About = () => {
 
 function CardBod({ name, post, description, imgSrc }) {
   return (
-    <div className="w-1/2 sm:w-1/3 flex-shrink-0 mb-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-1/2 sm:w-1/3 flex-shrink-0 mb-5 bg-gray-200 mx-2 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <div className="flex flex-col md:flex-row p-2">
         <img
           className="mx-5 md:w-1/2 rounded-full shadow-lg"

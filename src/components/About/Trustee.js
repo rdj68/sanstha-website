@@ -29,7 +29,7 @@ export const Trustee = () => {
         return (
           <>
             <div class="flex justify-center md:mx-20 mx-3 mt-10 mb-10">
-              <div class="flex flex-col rounded-lg bg-white shadow-lg dark:bg-neutral-700  md:flex-row">
+              <div class="flex flex-col rounded-lg bg-purple-100 shadow-lg dark:bg-neutral-700  md:flex-row">
                 <img
                   class="h-full w-full rounded-t-lg md:w-full md:rounded-none md:rounded-l-lg"
                   src={bbb}

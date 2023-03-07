@@ -2,7 +2,7 @@ import React from "react";
 
 const ImageCarousel = () => {
   return (
-    <div className="p-2">
+    <div className="px-2">
       <div
         id="carouselExampleControls"
         className="relative"

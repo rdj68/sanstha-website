@@ -8,7 +8,7 @@ import { ChevronUpIcon } from "@heroicons/react/24/solid";
 const Navbar = () => {
   const Styles = {
     mainNavContainer: "w-[100vw]  hidden md:inline",
-    mainSidenavContainer: "p-2 bg-white sticky top-0 md:hidden",
+    mainSidenavContainer: "px-2 bg-white sticky top-0 md:hidden",
     navContainer:
       "p-4 border-b-[1px] border-gray-300 flex flex-col justify-center ",
     li_items:

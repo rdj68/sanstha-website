@@ -2,7 +2,7 @@ import React from "react";
 
 const Founder = () => {
   return (
-    <div className=" px-10 md:mx-20 border-[1px] py-2 bg-gray-200 m-2 rounded-lg text-center ">
+    <div className=" px-5 mx-5 md:px-10 md:mx-20 border-[1px] py-2 bg-gray-200 m-2 rounded-lg text-center ">
       <div>
         <p className="md:text-3xl font-bold ">
           Amrutvahini Sheti and Shikshan Vikas Sanstha, Sangamner

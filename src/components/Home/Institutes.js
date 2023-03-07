@@ -4,8 +4,8 @@ import { instituteData } from "./InstituteData";
 export function Institutes() {
   return (
     <div className="p-2">
-        <p className="text-4xl mb-4 font-semibold text-center">Institutes</p>
-      <div className="flex flex-row gap-2 overflow-auto">
+      <p className="text-4xl mb-4 font-semibold text-center">Institutes</p>
+      <div className="flex flex-row gap-3 p-3 overflow-auto">
         {instituteData.map((institute, index) => {
           return (
             <InstituteCard
@@ -22,7 +22,7 @@ export function Institutes() {
 }
 function InstituteCard({ name, description, imgSrc }) {
   return (
-    <div className="w-1/2 sm:w-1/5 flex-shrink-0 mb-5 bg-gray-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-105 transtion-all duration-300 ease-in-out cursor-pointer">
+    <div className="w-1/2 sm:w-1/5 flex-shrink-0 mb-5 bg-gray-200 border border-gray-200 rounded-lg shadow hover:scale-105 transtion-all duration-300 ease-in-out cursor-pointer">
       <div className="flex flex-col p-2">
         <img className="mx-5 shadow-lg" src={imgSrc} alt={name} />
         <div className="pl-2 text-center">

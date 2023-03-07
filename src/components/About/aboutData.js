@@ -82,7 +82,7 @@ export const messsageList = [
     message:
       "Amrutvahini Sheti and Shikshan Vikas Sanstha is established with the mission of the upliftment of the rural people. Since its establishment, the Sanstha has expanded the horizon of education in the rural area of Sangamner. High-quality education is made available to the children of farmers, labourers, and people of all strata at an affordable cost. All institutes working under the patronage of Amrutvahini Sheti and Shikshan Vikas Sanstha deliver education at par with global standards, accredited by esteemed organizations like NBA and NACC, and thereby fulfill the dreams of the youths.",
     heading: "President's Message",
-    imgSrc: "bbb.jpg",
+    imgSrc: "/about/bbb.jpg",
     colorBg: " bg-orange-100",
   },
   {
@@ -91,7 +91,7 @@ export const messsageList = [
     message:
       "The education imparted in the schools and colleges of Amrutvahini Sheti and Shikshan Vikas Sanstha is the sum of all attributes required in any profession. We impart quality education to enhance the personality of our students; build their character and intellect, thereby making them reliable and self-sufficient in this highly competitive world. Our objective is not only to educate students but also to instill in them values of integrity, honesty, and capability for hard work. ASSVS services students to realize their dreams and spread their wings to soar high in the sky.",
     heading: "Trustee's Desk",
-    imgSrc: "bbb.jpg",
+    imgSrc: "/about/bbb.jpg",
     colorBg: " bg-purple-100",
   },
   {

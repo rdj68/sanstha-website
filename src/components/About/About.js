@@ -16,15 +16,14 @@ export const About = () => {
         />
       ))}
       <div>
-        <h1 className="text-3xl text-left">Board of Directors</h1>
+        <h1 className="text-3xl text-center font-bold">Board of Directors</h1>
         <div className="bod flex w-full overflow-x-scroll my-5">
           {bod.map((person) => (
             <CardBod
               key={person.name}
               name={person.name}
               post={person.position}
-              imgSrc={process.env.PUBLIC_URL + person.src}
-              description={person.desc}
+              imgSrc={person.src}
             />
           ))}
         </div>
@@ -33,7 +32,7 @@ export const About = () => {
   );
 };
 
-function CardBod({ name, post, description, imgSrc }) {
+function CardBod({ name, post, imgSrc }) {
   return (
     <div className="w-1/2 sm:w-1/3 flex-shrink-0 mb-5 bg-gray-200 hover:shadow-lg cursor-pointer mx-2 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <div className="flex flex-col md:flex-row p-2">

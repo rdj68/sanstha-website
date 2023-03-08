@@ -8,6 +8,10 @@ import { Facilities } from "./Facilities/Facilities";
 import Gallery from "./Gallery/Gallery";
 import Navbar from "./common/Navbar";
 import { Footer } from "./common/Footer";
+import Bus from "./Facilities/Bus";
+import Hostel from "./Facilities/Hostel";
+import Banking from "./Facilities/Banking";
+import Other from "./Facilities/Other";
 function App() {
   return (
     <>
@@ -17,6 +21,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/hostel" element={<Hostel />} />
+          <Route path="/busservice" element={<Bus />} />
+          <Route path="/banking" element={<Banking />} />
+          <Route path="/otherfacilities" element={<Other />} />
           <Route path="/facilities" element={<Facilities />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
